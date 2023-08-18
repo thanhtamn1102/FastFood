@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<fx:root alignment="CENTER" spacing="10.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: white; -fx-border-color: #EDEDED;" type="javafx.scene.layout.VBox" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+   </padding>
+   <children>
+      <HBox>
+         <children>
+            <HBox HBox.hgrow="ALWAYS">
+               <children>
+                  <Label fx:id="lblNhomTuyChon" text="Nhóm tùy chọn 1">
+                     <font>
+                        <Font name="Segoe UI Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+               <children>
+                  <Group>
+                     <children>
+                        <SVGPath id="btnDelete" fx:id="btnDelete" content="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z" fill="#ff8000" scaleX="0.035" scaleY="0.035" />
+                     </children>
+                  </Group>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <VBox>
+         <children>
+            <HBox spacing="25.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <Label text="Tên nhóm tùy chọn " textFill="#a7a9ac">
+                           <font>
+                              <Font name="Segoe UI" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="14.0" text="(*)" textFill="RED">
+                           <font>
+                              <Font name="Segoe UI" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="txtTenNhomTuyChon" prefWidth="300.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <Label text="Số lượng chọn tối đa  " textFill="#a7a9ac">
+                           <font>
+                              <Font name="Segoe UI" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtSoLuongToiDa" />
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER" layoutX="160.0" layoutY="10.0">
+                     <children>
+                        <CheckBox fx:id="ckbChonItNhat1" mnemonicParsing="false" text="Chọn ít nhất 1" textFill="#a7a9ac">
+                           <font>
+                              <Font name="Segoe UI" size="13.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </VBox>
+                  <Button fx:id="btnThemTuyChon" mnemonicParsing="false" text="Thêm tùy chọn" />
+               </children>
+            </HBox>
+            <VBox>
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="Danh sách tùy chọn" textFill="#a7a9ac" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <VBox fx:id="boxTuyChon" spacing="10.0">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</fx:root>
